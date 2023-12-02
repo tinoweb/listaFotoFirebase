@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Imagens</title>
+    
+    <!-- Link para o Bootstrap 4 CSS via CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+    <!-- Estilos personalizados -->
+    <style>
+        /* Estilos personalizados para a página */
+        .image-card {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 3px;
+        }
+        .modal-content {
+            border-radius: 20px; /* Adicione um valor adequado para o arredondamento desejado */
+        }
+        .image-card img {
+            max-width: 100%;
+            height: auto;
+        }
+        .modal-nav-btn {
+            background-color: transparent;
+            border: 1px solid #bcc1c7; /* Cor da borda dos botões */
+            color: #232527; /* Cor do texto dos botões */
+            border-radius: 50px; /* Borda arredondada */
+        }
+
+        .modal-nav-btn:hover {
+            background-color: #000000; /* Cor de fundo ao passar o mouse */
+            color: white; /* Cor do texto ao passar o mouse */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Lista de Imagens</h1>
+        <div class="row" id="imageList"></div>
+    </div>
+
+
+    <!-- Modal para exibir a imagem em tamanho real -->
+<div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="imageModalLabel">Imagem em Tamanho Real</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img id="modalImage" src="" alt="Imagem em Tamanho Real" class="img-fluid">
+            </div>
+            <div id="modalNav" class="d-flex justify-content-between">
+                <!-- Botão Anterior -->
+                <button class="btn btn-primary modal-nav-btn prev rounded-pill">Anterior</button>
+                <!-- Botão Próxima -->
+                <button class="btn btn-primary modal-nav-btn next rounded-pill">Próxima</button>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+    <!-- Link para o Bootstrap 4 JavaScript via CDN (popper.js é necessário para funcionalidades avançadas) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Seu arquivo JavaScript personalizado -->
+    <script type="module" src="app.js"></script>
+</body>
+</html>
